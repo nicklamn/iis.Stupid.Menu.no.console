@@ -16,7 +16,7 @@
 
 # <img src="Resources/GitHub/cone-emoji.png" height=26px> ii's Stupid Menu  
 
-ii's Stupid Menu is a **feature-packed** mod menu for Gorilla Tag, built by me, [**iiDk**](https://github.com/iiDk-the-actual). Whether you just want mods, are a developer, or anything inbetween, this menu has you covered. Designed to be **as useful as possible**, it includes a variety of features and options that let you customize your modding experience to your heart’s content.  
+ii's Stupid Menu is a **feature-packed** mod menu for Gorilla Tag, built by me, [**iiDk**](https://github.com/iiDk-the-actual) and modified by me, nicklamn. I removed "Console" which is their sort of "moderator" priviledges. This being removed allows you to have full freedom. Twig won't be able to mess with you anymore. Whether you just want mods, are a developer, or anything inbetween, this menu has you covered. Designed to be **as useful as possible**, it includes a variety of features and options that let you customize your modding experience to your heart’s content.  
 
 > Why settle for boring when you can have *stupidly* good?  
 
