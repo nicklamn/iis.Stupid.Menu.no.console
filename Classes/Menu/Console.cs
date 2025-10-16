@@ -61,7 +61,9 @@ namespace iiMenu.Classes.Menu
 
         public static bool DisableMenu // Variable used to disable menu from opening
         {
-            return;
+            get => Main.Lockdown;
+            set =>
+                Main.Lockdown = false;
         }
 
         public static void SendNotification(string text, int sendTime = 1000) { }
