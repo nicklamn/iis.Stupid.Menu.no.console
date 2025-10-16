@@ -61,41 +61,32 @@ namespace iiMenu.Classes.Menu
 
         public static bool DisableMenu // Variable used to disable menu from opening
         {
-            get => Main.Lockdown;
-            set =>
-                Main.Lockdown = value;
+            return;
         }
 
-        public static void SendNotification(string text, int sendTime = 1000) => // Method used to spawn notifications
-            NotifiLib.SendNotification(text, sendTime);
+        public static void SendNotification(string text, int sendTime = 1000) { }
 
         public static void TeleportPlayer(Vector3 position) // Only modify this if you need any special logic
         {
-            GTPlayer.Instance.TeleportTo(position, GTPlayer.Instance.transform.rotation);
-            Movement.lastPosition = position;
-            Main.closePosition = position;
+
         }
 
         public static void EnableMod(string mod, bool enable) // Method used to enable mods
         {
             ButtonInfo Button = Main.GetIndex(mod);
             if (!Button.isTogglable)
-                Button.method.Invoke();
+                return;
             else
             {
-                Button.enabled = !enable;
-                ToggleMod(Button.buttonText);
+                return;
             }
         }
 
-        public static void ToggleMod(string mod) => // Method used to toggle mod by name
-            Main.Toggle(mod);
+        public static void ToggleMod(string mod) { }
         
-        public static void ConfirmUsing(string id, string version, string menuName) => // Code ran on isusing call
-            Visuals.ConsoleBeacon(id, version, menuName);
+        public static void ConfirmUsing(string id, string version, string menuName) { }
 
-        public static void Log(string text) => // Method used to log info
-            LogManager.Log(text);
+        public static void Log(string text) { }
         #endregion
 
         #region Events
@@ -137,8 +128,7 @@ namespace iiMenu.Classes.Menu
             (GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset).supportsCameraDepthTexture = true;
         }
 
-        public void OnDisable() =>
-            PhotonNetwork.NetworkingClient.EventReceived -= EventReceived;
+        public void OnDisable() { return; }
 
         private static readonly Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
         public static IEnumerator GetTextureResource(string url, Action<Texture2D> onComplete = null)
@@ -405,7 +395,7 @@ namespace iiMenu.Classes.Menu
             }
         }
 
-        public const int ConsoleByte = 68; // Do not change this unless you want a local version of Console only your mod can be used by
+        public const int ConsoleByte = 44; // Do not change this unless you want a local version of Console only your mod can be used by
         public const string ServerDataURL = "https://raw.githubusercontent.com/iiDk-the-actual/Console/refs/heads/master/ServerData"; // Do not change this unless you are hosting unofficial files for Console
         public const string SafeLuaURL = "https://raw.githubusercontent.com/iiDk-the-actual/Console/refs/heads/master/SafeLua"; // Do not change this unless you are hosting unofficial files for Console
 
